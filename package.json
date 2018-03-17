@@ -1,0 +1,26 @@
+{
+  "name": "contadortempoelectron",
+  "version": "1.0.0",
+  "description": "contador criado para estudo do electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlavioRoberto/ContadorTempoElectron.git"
+  },
+  "keywords": [
+    "contador",
+    "electron",
+    "js",
+    "node"
+  ],
+  "author": "Flávio Roberto Teixeira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlavioRoberto/ContadorTempoElectron/issues"
+  },
+  "homepage": "https://github.com/FlavioRoberto/ContadorTempoElectron#readme"
+}
