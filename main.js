@@ -15,6 +15,7 @@ var rotasView = {
 };
 
 var telasAbertas = [];
+let telaSobre = null;
 
 
 //#region eventos app
@@ -28,7 +29,8 @@ app.on('window-all-closed', exit);
 //#endregion
 
 //#region eventos ipcMain
-ipcMain.on("abrir-tela-sobre", abrirTelaSobre);
+ipcMain.on("abrir-tela-sobre", _abrirTelaSobre);
+ipcMain.on('fechar-tela-sobre',_fecharTelaSobre);
 //#endregion
 
 //#region metodos
@@ -41,9 +43,10 @@ function start() {
     let configPrincipal = {
         id: 'principal',
         width: 600,
-        heigth: 300
+        height: 400
     };
-    _constroiJanela(configPrincipal, rotasView.principal);
+   
+   var janelaPrincipal =  _constroiJanela(configPrincipal, rotasView.principal);
 
 };
 
@@ -53,14 +56,6 @@ function exit() {
     app.quit();
 };
 
-function abrirTelaSobre() {
-    let configSobre = {
-        id: 'sobre',
-        width: 300,
-        heigth: 100
-    };
-    return _constroiJanela(configSobre, rotasView.sobre);
-}
 //#endregion
 
 //#region metodosInternos
@@ -80,6 +75,27 @@ function _constroiJanela(config, url) {
     janela.on('closed', () => {
         _removeIdjanelaTelasAbertas(config.id);
     });
+
+    return janela;
+}
+
+
+function _abrirTelaSobre() {
+    let configSobre = {
+        id: 'sobre',
+        width: 330,
+        height:370,
+        frame: false,
+        alwaysOnTop: true //faz a janela sempre ficar por cima
+    };
+   
+    telaSobre = _constroiJanela(configSobre, rotasView.sobre);
+    return telaSobre;
+}
+
+function _fecharTelaSobre(){
+    if(telaSobre != null)
+        telaSobre.close();
 }
 
 //percorre o array com o id das telas e verifica se ela esta aberta

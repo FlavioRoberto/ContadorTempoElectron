@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sobre</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./../../../node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/sobre.css">
 </head>
+
 <body>
-   <p>Aqui vem o sobre da nossa aplicação! Demais!!</p>
+    <div class="container flow-text">
+        <div class="row">
+            <div class="col s12 ">
+                <h4>Sobre</h4>
+                <p>Contador de tempo</p>
+                <b>Versão Electron:</b>
+                <span id="electron-versao"></span>
+                </p>
+                <b>Versão materialize:</b>
+                <span id="materialize-versao"></span>
+                </p>
+                <p>
+                    <b>Por:</b> Flávio R Teixeira</b>
+                </p>
+
+
+                <div class="row valign-wrapper">
+                    <div class="col s4 left">
+                        <img class="responsive-img logo" id="link-github" src="../../img/git.png">
+                    </div>
+                    <div class="col s4 left">
+                        <img class="responsive-img logo" id="link-eletron" src="../../img/logo.png">
+                    </div>
+                    <div class="col s4 left">
+                        <img class="responsive-img logo" id="link-materialize" src="../../img/materiallize.png">
+                    </div>
+                </div>
+                <a href="#" id="fechar-tela-sobre" class="waves-effect waves-light btn col s12">
+                    Fechar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./../../../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="js/sobre-render.js"></script>
 </body>
+
 </html>
