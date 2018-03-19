@@ -42,8 +42,8 @@ function start() {
     //metodo responsavel por construir janelas
     let configPrincipal = {
         id: 'principal',
-        width: 600,
-        height: 400
+        width: 800,
+        height: 630
     };
    
    var janelaPrincipal =  _constroiJanela(configPrincipal, rotasView.principal);

@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contador de tempo com electron</title>
     <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../../node_modules/materialize-css/dist/css/materialize.min.css">
 </head>
-<body>
-    <h1>Sou uma janela meu caro.</h1>
-    <a href="#" id="link-sobre">Sobre</a>
 
-    
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="row valign-wrapper">
+                <h2 class="blue-text text-darken-2 center-align"><b>Contador com electron.</b></h2>
+            </div>
+
+            <a class="btn-floating btn-small teal teal darken-1" id="link-sobre">
+                <i class="material-icons">info_outline</i>
+            </a>
+
+            <div class="card-panel blue lighten-3 valign-wrapper">
+                <div class="row ">
+                    <div class="col s10">
+                        <h2 class="cronometro">
+                            <b>00:10:23</b>
+                        </h2>
+                    </div>
+                    <div class="col s2">
+
+                        <a class="btn-floating btn-large waves-effect waves-light teal teal darken-1 btn-play">
+                            <i class="material-icons icon-play">play_arrow</i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-panel blue lighten-3 center-align">
+                <p class="titulo-cronometro">Lógica de programação</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./../../../node_modules/materialize-css/dist/js/materialize.min.js"></script>
     <script src="js/index-render.js"></script>
 </body>
+
 </html>

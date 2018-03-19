@@ -1,3 +1,40 @@
-h1{
-    color: darkblue;
+body{
+    background:rgb(202, 224, 224);
+}
+
+#link-sobre{
+    position: absolute!important;
+    top:0!important;
+    right: 0!important;
+    margin: .5em;
+}
+
+.cronometro{
+    color: whitesmoke;
+    font-size: 7em;
+}
+
+.titulo-cronometro{
+    color: whitesmoke;
+    font-size: 1.7em;
+}
+
+
+
+.btn-play{
+    position: relative;
+    width: 8em!important;
+    height: 8em!important;
+  
+}
+
+.icon-play{
+    font-size: 50px!important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+    
+
 }
