@@ -1,7 +1,18 @@
-body{
-    background:rgb(202, 224, 224);
+:root{
+    --backgroundApp:#313336;
+    --backgroundIntoBox:#fff;
+    
 }
 
+body{
+    background:var(--backgroundApp) ;
+
+}
+
+.row{
+    width: 100%;
+    text-align: center;
+}
 #link-sobre{
     position: absolute!important;
     top:0!important;
@@ -13,28 +24,23 @@ body{
     color: whitesmoke;
     font-size: 7em;
 }
+.title,.info-text{
+    color: var(--backgroundIntoBox);
+}
+.title{
+    text-transform: uppercase;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 500;
+}
 
-.titulo-cronometro{
-    color: whitesmoke;
-    font-size: 1.7em;
+.info-text{
+    font-weight: bold;
+    font-size: 1.8em;
+    text-transform: uppercase;
 }
 
 
-
-.btn-play{
-    position: relative;
-    width: 8em!important;
-    height: 8em!important;
-  
-}
-
-.icon-play{
-    font-size: 50px!important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) 
-    
-
+.container-cards{
+    margin-top: 20%;
 }
