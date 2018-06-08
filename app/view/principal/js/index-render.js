@@ -1,6 +1,6 @@
 //importando o IPC responsável pela comunicação entre o processo principal e o de render
 const { ipcRenderer } = require('electron'); //ipcRender comunicação do processo de render
-const moment = require('moment');
+const tempo  = require('../../meus-modulos/tempo');
 
 let linkSobre = document.querySelector("#link-sobre");
 let linkBtnContador = document.querySelector("#link-contador");
@@ -14,7 +14,7 @@ linkSobre.addEventListener('click', function () {
 });
 
 linkBtnContador.addEventListener('click', function () {
-    iniciarContagemDeTempo();
+    tempo.iniciarContagemDeTempo(tempo, linkTemporizador);
 });
 
 //#endregion
@@ -22,25 +22,5 @@ linkBtnContador.addEventListener('click', function () {
 
 //#region metodos
 
-function iniciarContagemDeTempo() {
-    var segundos = convertStringParaSegundos(linkTemporizador.textContent);
-    setInterval(function () {
-        segundos++;
-        linkTemporizador.textContent = convertSegundosParahora(segundos);
-    }, 1000)
-}
-
-
-function convertSegundosParahora(segundos) {
-    if (segundos == null)
-        return;
-    return moment().startOf('day').seconds(segundos).format("HH:mm:ss");
-}
-
-function convertStringParaSegundos(string) {
-    if (string == "")
-        return;
-    return moment.duration(string).asSeconds();
-}
 
 //#endregion metodos
