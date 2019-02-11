@@ -26,6 +26,7 @@
   "dependencies": {
     "electron": "^1.8.4",
     "materialize-css": "^0.100.2",
+    "moment": "^2.22.2",
     "pkginfo": "^0.4.1"
   }
 }
